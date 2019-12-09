@@ -12,8 +12,38 @@ struct Departure: Codable {
     let direction: String
     let when: Date
     let line: Line
+    
+    var directedLine: DirectedLine {
+        DirectedLine(line: line, direction: direction)
+    }
 }
 
 struct Line: Codable {
     let name: String
+}
+
+struct DirectedLine {
+    let line: Line
+    let direction: String
+}
+
+extension DirectedLine: Comparable {
+    static func == (lhs: DirectedLine, rhs: DirectedLine) -> Bool {
+        return lhs.line.name == rhs.line.name && lhs.direction == rhs.direction
+    }
+
+    static func < (lhs: DirectedLine, rhs: DirectedLine) -> Bool {
+        if (lhs.line.name != rhs.line.name) {
+            return lhs.line.name < rhs.line.name
+        } else {
+            return lhs.direction < rhs.direction
+        }
+    }
+}
+
+extension DirectedLine: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.line.name)
+        hasher.combine(self.direction)
+    }
 }

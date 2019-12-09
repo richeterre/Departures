@@ -9,10 +9,10 @@
 import Foundation
 
 struct LineDepartureList {
-    let line: String
+    let directedLine: DirectedLine
     let departures: [Int]
 }
 
 extension LineDepartureList: Identifiable {
-    var id: String { line }
+    var id: String { "\(directedLine.line) \(directedLine.direction)" }
 }

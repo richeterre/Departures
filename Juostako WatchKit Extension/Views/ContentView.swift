@@ -19,11 +19,18 @@ struct ContentView: View {
     var body: some View {
         VStack {
             List(departuresByLine(departures: departures, moment: now)) { departureList in
-                HStack {
-                    Text("\(departureList.line)")
-                    Spacer()
-                    ForEach(departureList.departures, id: \.self) {
-                        MinutesBox(minutes: $0)
+                VStack(alignment: .trailing) {
+                    HStack(alignment: .firstTextBaseline) {
+                        Text("\(departureList.directedLine.line.name)")
+                        Spacer()
+                        Text("→ \(departureList.directedLine.direction)")
+                            .font(.system(size: 10))
+                            .lineLimit(1)
+                    }
+                    HStack {
+                        ForEach(departureList.departures, id: \.self) {
+                            MinutesBox(minutes: $0)
+                        }
                     }
                 }
             }
@@ -55,11 +62,11 @@ struct ContentView: View {
     }
     
     func departuresByLine(departures: [Departure], moment: Date) -> [LineDepartureList] {
-        return Dictionary.init(grouping: departures) { $0.line.name }
+        return Dictionary.init(grouping: departures) { $0.directedLine }
             .map { (key, value) in
-                LineDepartureList(line: key, departures: value.map { minutesUntilDeparture(departure: $0, moment: moment) })
+                LineDepartureList(directedLine: key, departures: value.map { minutesUntilDeparture(departure: $0, moment: moment) })
             }
-            .sorted(by: { $0.line < $1.line })
+            .sorted(by: { $0.directedLine < $1.directedLine })
     }
     
     func minutesUntilDeparture(departure: Departure, moment: Date) -> Int {
@@ -72,17 +79,17 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(
             departures: [
                 Departure(
-                    direction: "",
+                    direction: "S+U Warschauer Str.",
                     when: Date.init(timeIntervalSinceNow: 0),
                     line: Line(name: "U1")
                 ),
                 Departure(
-                    direction: "",
+                    direction: "Uhlandstraße",
                     when: Date.init(timeIntervalSinceNow: 120),
                     line: Line(name: "U1")
                 ),
                 Departure(
-                    direction: "",
+                    direction: "Krumme Lanke",
                     when: Date.init(timeIntervalSinceNow: 240),
                     line: Line(name: "U3")
                 )

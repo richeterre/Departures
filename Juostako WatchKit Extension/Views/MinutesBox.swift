@@ -13,6 +13,7 @@ struct MinutesBox: View {
     
     var body: some View {
         Text("\(minutes)′")
+            .lineLimit(1)
             .padding(4)
             .background(
                 RoundedRectangle(cornerRadius: 8)
