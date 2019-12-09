@@ -33,11 +33,15 @@ struct StationDetail: View {
                 }
                 .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
             }
-            Spacer()
-            Button(action: loadDepartures) {
-                Text("Reload")
-            }
         }
+        .contextMenu(menuItems: {
+            Button(action: loadDepartures, label: {
+                VStack {
+                    Image(systemName: "arrow.clockwise").font(.title)
+                    Text("Reload")
+                }
+            })
+        })
         .onAppear(perform: loadDepartures)
         .navigationBarTitle(station.name)
     }
