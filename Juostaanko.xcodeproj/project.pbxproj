@@ -467,6 +467,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Juostaanko WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 544BVFC682;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Juostaanko WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,6 +491,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Juostaanko WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 544BVFC682;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Juostaanko WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -513,6 +515,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 544BVFC682;
 				IBSC_MODULE = Juostaanko_WatchKit_Extension;
 				INFOPLIST_FILE = "Juostaanko WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = net.martinrichter.Juostaanko.watchkitapp;
@@ -531,6 +534,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 544BVFC682;
 				IBSC_MODULE = Juostaanko_WatchKit_Extension;
 				INFOPLIST_FILE = "Juostaanko WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = net.martinrichter.Juostaanko.watchkitapp;
@@ -548,7 +552,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 544BVFC682;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.martinrichter.Juostaanko;
 				PRODUCT_NAME = Juostaanko;
@@ -561,7 +565,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 544BVFC682;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.martinrichter.Juostaanko;
 				PRODUCT_NAME = Juostaanko;
