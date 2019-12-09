@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  StationDetail.swift
 //  Juostako WatchKit Extension
 //
 //  Created by Martin Richter on 08.12.19.
@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-let EXAMPLE_URL = URL(string: "https://3.vbb.transport.rest/stops/900013103/departures")!
-
-struct ContentView: View {
+struct StationDetail: View {
+    let station: Station
+    
     @State var departures = [Departure]()
     @State var now = Date()
     
@@ -41,11 +41,11 @@ struct ContentView: View {
         }
         .onReceive(timer) { self.now = $0 }
         .onAppear(perform: loadDepartures)
-        .navigationBarTitle("U Prinzenstraße")
+        .navigationBarTitle(station.name)
     }
     
     func loadDepartures() {
-        URLSession.shared.dataTask(with: EXAMPLE_URL) { (data, _, error) in
+        URLSession.shared.dataTask(with: URL(string: "\(BASE_URL_STRING)/\(station.id)/departures")!) { (data, _, error) in
             if let data = data {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
@@ -74,9 +74,10 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct StationDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(
+        StationDetail(
+            station: Station(id: "900000013103", name: "U Prinzenstr."),
             departures: [
                 Departure(
                     direction: "S+U Warschauer Str.",
