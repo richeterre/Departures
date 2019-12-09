@@ -14,10 +14,10 @@ struct MinutesBox: View {
     var body: some View {
         Text("\(minutes)′")
             .lineLimit(1)
-            .padding(4)
+            .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
             .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(fillColor(minutes: minutes))
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(fillColor(minutes: minutes), lineWidth: 2)
             )
     }
     
@@ -36,7 +36,7 @@ struct MinutesBox: View {
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MinutesBox(minutes: 1).previewDisplayName("Upcoming")
+            MinutesBox(minutes: 10).previewDisplayName("Upcoming")
             MinutesBox(minutes: 0).previewDisplayName("Departing")
             MinutesBox(minutes: -1).previewDisplayName("Departed")
         }

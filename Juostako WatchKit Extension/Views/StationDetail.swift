@@ -31,6 +31,7 @@ struct StationDetail: View {
                         }
                     }
                 }
+                .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
             }
             Spacer()
             Button(action: loadDepartures) {
