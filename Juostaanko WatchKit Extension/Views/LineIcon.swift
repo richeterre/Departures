@@ -1,6 +1,6 @@
 //
 //  LineIcon.swift
-//  Juostako WatchKit Extension
+//  Juostaanko WatchKit Extension
 //
 //  Created by Martin Richter on 09.12.19.
 //  Copyright © 2019 Martin Richter. All rights reserved.
