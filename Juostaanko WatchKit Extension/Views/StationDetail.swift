@@ -17,7 +17,7 @@ struct StationDetail: View {
     var body: some View {
         VStack {
             List(departuresByLine(departures: departures, moment: lastUpdated)) { departureList in
-                VStack(alignment: .trailing, spacing: 4) {
+                VStack(alignment: .trailing, spacing: 8) {
                     HStack(alignment: .center) {
                         LineIcon(line: departureList.directedLine.line)
                         Spacer()
@@ -31,7 +31,7 @@ struct StationDetail: View {
                         }
                     }
                 }
-                .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+                .padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
             }
             Spacer()
             Button(action: loadDepartures) {
