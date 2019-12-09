@@ -12,9 +12,7 @@ struct StationDetail: View {
     let station: Station
     
     @State var departures = [Departure]()
-    @State var now = Date()
-    
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var lastUpdated = Date()
     
     var body: some View {
         VStack {
@@ -39,21 +37,27 @@ struct StationDetail: View {
                 Text("Reload")
             }
         }
-        .onReceive(timer) { self.now = $0 }
         .onAppear(perform: loadDepartures)
         .navigationBarTitle(station.name)
     }
     
     func loadDepartures() {
-        URLSession.shared.dataTask(with: URL(string: "\(BASE_URL_STRING)/\(station.id)/departures")!) { (data, _, error) in
+        let url = URL(string: "\(BASE_URL_STRING)/\(station.id)/departures")!
+        
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let data = data {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
                 
-                if let decodedResponse = try? decoder.decode([Departure].self, from: data) {
+                do {
+                    let decodedResponse = try decoder.decode([Departure].self, from: data)
                     DispatchQueue.main.async {
                         self.departures = decodedResponse
+                        self.lastUpdated = Date()
+                        
                     }
+                } catch let error {
+                    print("Decode error", error)
                 }
                 return
             }
@@ -95,7 +99,7 @@ struct StationDetail_Previews: PreviewProvider {
                     line: Line(name: "U3", color: LineColors(fg: "#fff", bg: "#019377"))
                 )
             ],
-            now: Date()
+            lastUpdated: Date()
         )
     }
 }
