@@ -18,10 +18,10 @@ struct StationDetail: View {
     
     var body: some View {
         VStack {
-            List(departuresByLine(departures: departures, moment: now)) { departureList in
-                VStack(alignment: .trailing) {
-                    HStack(alignment: .firstTextBaseline) {
-                        Text("\(departureList.directedLine.line.name)")
+            List(departuresByLine(departures: departures, moment: lastUpdated)) { departureList in
+                VStack(alignment: .trailing, spacing: 4) {
+                    HStack(alignment: .center) {
+                        LineIcon(line: departureList.directedLine.line)
                         Spacer()
                         Text("→ \(departureList.directedLine.direction)")
                             .font(.system(size: 10))
@@ -82,17 +82,17 @@ struct StationDetail_Previews: PreviewProvider {
                 Departure(
                     direction: "S+U Warschauer Str.",
                     when: Date.init(timeIntervalSinceNow: 0),
-                    line: Line(name: "U1")
+                    line: Line(name: "U1", color: LineColors(fg: "#fff", bg: "#55a822"))
                 ),
                 Departure(
                     direction: "Uhlandstraße",
                     when: Date.init(timeIntervalSinceNow: 120),
-                    line: Line(name: "U1")
+                    line: Line(name: "U1", color: LineColors(fg: "#fff", bg: "#55a822"))
                 ),
                 Departure(
                     direction: "Krumme Lanke",
                     when: Date.init(timeIntervalSinceNow: 240),
-                    line: Line(name: "U3")
+                    line: Line(name: "U3", color: LineColors(fg: "#fff", bg: "#019377"))
                 )
             ],
             now: Date()

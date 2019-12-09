@@ -18,8 +18,14 @@ struct Departure: Codable {
     }
 }
 
+struct LineColors: Codable {
+    let fg: String
+    let bg: String
+}
+
 struct Line: Codable {
     let name: String
+    let color: LineColors?
 }
 
 struct DirectedLine {
