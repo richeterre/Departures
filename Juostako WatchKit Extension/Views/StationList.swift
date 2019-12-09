@@ -13,8 +13,8 @@ let BASE_URL_STRING = "https://3.vbb.transport.rest/stops"
 struct StationList: View {
     @State var stations = [
         Station(id: "900000054103", name: "U Eisenacher Str."),
-        Station(id: "900000017104", name: "U Möckernbrücke"),
         Station(id: "900000013103", name: "U Prinzenstr."),
+        Station(id: "900000017104", name: "U Möckernbrücke")
     ]
     
     var body: some View {
