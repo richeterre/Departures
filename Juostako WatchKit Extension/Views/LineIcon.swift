@@ -43,12 +43,14 @@ struct LineIcon_Previews: PreviewProvider {
             LineIcon(
                 line: Line(
                     name: "U1",
+                    product: "subway",
                     color: LineColors(fg: "#fff", bg: "55a822")
                 )
             )
             LineIcon(
                 line: Line(
                     name: "U7",
+                    product: "subway",
                     color: LineColors(fg: "#fff", bg: "#3690c0")
                 )
             )

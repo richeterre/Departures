@@ -25,6 +25,7 @@ struct LineColors: Codable {
 
 struct Line: Codable {
     let name: String
+    let product: String
     let color: LineColors?
 }
 
@@ -39,7 +40,9 @@ extension DirectedLine: Comparable {
     }
 
     static func < (lhs: DirectedLine, rhs: DirectedLine) -> Bool {
-        if (lhs.line.name != rhs.line.name) {
+        if (lhs.line.product != rhs.line.product) {
+            return lhs.line.product == "subway"
+        } else if (lhs.line.name != rhs.line.name) {
             return lhs.line.name < rhs.line.name
         } else {
             return lhs.direction < rhs.direction

@@ -87,17 +87,17 @@ struct StationDetail_Previews: PreviewProvider {
                 Departure(
                     direction: "S+U Warschauer Str.",
                     when: Date.init(timeIntervalSinceNow: 0),
-                    line: Line(name: "U1", color: LineColors(fg: "#fff", bg: "#55a822"))
+                    line: Line(name: "U1", product: "subway", color: LineColors(fg: "#fff", bg: "#55a822"))
                 ),
                 Departure(
                     direction: "Uhlandstraße",
                     when: Date.init(timeIntervalSinceNow: 120),
-                    line: Line(name: "U1", color: LineColors(fg: "#fff", bg: "#55a822"))
+                    line: Line(name: "U1", product: "subway", color: LineColors(fg: "#fff", bg: "#55a822"))
                 ),
                 Departure(
                     direction: "Krumme Lanke",
                     when: Date.init(timeIntervalSinceNow: 240),
-                    line: Line(name: "U3", color: LineColors(fg: "#fff", bg: "#019377"))
+                    line: Line(name: "U3", product: "subway", color: LineColors(fg: "#fff", bg: "#019377"))
                 )
             ],
             lastUpdated: Date()
