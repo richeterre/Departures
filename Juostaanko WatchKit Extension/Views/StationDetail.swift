@@ -47,7 +47,9 @@ struct StationDetail: View {
     }
     
     func loadDepartures() {
-        let url = URL(string: "\(BASE_URL_STRING)/\(station.id)/departures")!
+        var urlComponents = URLComponents(string: "\(BASE_URL_STRING)/\(station.id)/departures")!
+        urlComponents.queryItems = [URLQueryItem(name: "duration", value: "15")]
+        let url = urlComponents.url!
         
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let data = data {
