@@ -12,7 +12,7 @@
 		5B2C3926239E745700C82D26 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C3925239E745700C82D26 /* Station.swift */; };
 		5B2C3928239E852100C82D26 /* LineIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C3927239E852100C82D26 /* LineIcon.swift */; };
 		5B2C392B239E85BB00C82D26 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C392A239E85BB00C82D26 /* Color.swift */; };
-		5BE8991C239D15A500D0954E /* Juostaanko.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BE8991B239D15A500D0954E /* Juostaanko.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5BE8991C239D15A500D0954E /* Departures.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BE8991B239D15A500D0954E /* Departures.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5BE89922239D15A500D0954E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE89920239D15A500D0954E /* Interface.storyboard */; };
 		5BE89924239D15A600D0954E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE89923239D15A600D0954E /* Assets.xcassets */; };
 		5BE8992B239D15A600D0954E /* Juostaanko WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5BE8992A239D15A600D0954E /* Juostaanko WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -60,7 +60,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				5BE8991C239D15A500D0954E /* Juostaanko.app in Embed Watch Content */,
+				5BE8991C239D15A500D0954E /* Departures.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +74,7 @@
 		5B2C3927239E852100C82D26 /* LineIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineIcon.swift; sourceTree = "<group>"; };
 		5B2C392A239E85BB00C82D26 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5BE89917239D15A500D0954E /* Juostaanko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Juostaanko.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BE8991B239D15A500D0954E /* Juostaanko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Juostaanko.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE8991B239D15A500D0954E /* Departures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Departures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE89921239D15A500D0954E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		5BE89923239D15A600D0954E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE89925239D15A600D0954E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5BE89917239D15A500D0954E /* Juostaanko.app */,
-				5BE8991B239D15A500D0954E /* Juostaanko.app */,
+				5BE8991B239D15A500D0954E /* Departures.app */,
 				5BE8992A239D15A600D0954E /* Juostaanko WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -215,7 +215,7 @@
 			);
 			name = "Juostaanko WatchKit App";
 			productName = "Juostako WatchKit App";
-			productReference = 5BE8991B239D15A500D0954E /* Juostaanko.app */;
+			productReference = 5BE8991B239D15A500D0954E /* Departures.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		5BE89929239D15A600D0954E /* Juostaanko WatchKit Extension */ = {
@@ -519,7 +519,7 @@
 				IBSC_MODULE = Juostaanko_WatchKit_Extension;
 				INFOPLIST_FILE = "Juostaanko WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = net.martinrichter.Juostaanko.watchkitapp;
-				PRODUCT_NAME = Juostaanko;
+				PRODUCT_NAME = Departures;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -538,7 +538,7 @@
 				IBSC_MODULE = Juostaanko_WatchKit_Extension;
 				INFOPLIST_FILE = "Juostaanko WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = net.martinrichter.Juostaanko.watchkitapp;
-				PRODUCT_NAME = Juostaanko;
+				PRODUCT_NAME = Departures;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

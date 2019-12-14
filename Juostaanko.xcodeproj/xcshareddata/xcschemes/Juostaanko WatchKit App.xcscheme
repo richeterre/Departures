@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5BE8991A239D15A500D0954E"
-               BuildableName = "Juostaanko.app"
+               BuildableName = "Departures.app"
                BlueprintName = "Juostaanko WatchKit App"
                ReferencedContainer = "container:Juostaanko.xcodeproj">
             </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BE8991A239D15A500D0954E"
-            BuildableName = "Juostaanko.app"
+            BuildableName = "Departures.app"
             BlueprintName = "Juostaanko WatchKit App"
             ReferencedContainer = "container:Juostaanko.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BE8991A239D15A500D0954E"
-            BuildableName = "Juostaanko.app"
+            BuildableName = "Departures.app"
             BlueprintName = "Juostaanko WatchKit App"
             ReferencedContainer = "container:Juostaanko.xcodeproj">
          </BuildableReference>
@@ -89,7 +89,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BE8991A239D15A500D0954E"
-            BuildableName = "Juostaanko.app"
+            BuildableName = "Departures.app"
             BlueprintName = "Juostaanko WatchKit App"
             ReferencedContainer = "container:Juostaanko.xcodeproj">
          </BuildableReference>
