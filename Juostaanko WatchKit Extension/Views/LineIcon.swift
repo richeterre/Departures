@@ -13,7 +13,7 @@ struct LineIcon: View {
     
     var body: some View {
         Text(line.name)
-            .fontWeight(.bold)
+            .font(.system(size: 18, weight: .bold, design: .default))
             .foregroundColor(textColor(line.color))
             .padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
             .background(

@@ -22,7 +22,7 @@ struct StationDetail: View {
                         LineIcon(line: departureList.directedLine.line)
                         Spacer()
                         Text("→ \(departureList.directedLine.direction)")
-                            .font(.system(size: 10))
+                            .font(.system(size: 11))
                             .lineLimit(1)
                     }
                     HStack {
