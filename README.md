@@ -1,6 +1,6 @@
 # Departures
 
-A standalone watchOS app built with SwiftUI for learning and fun. It shows upcoming transit departures for various stations in Berlin.
+A standalone watchOS app built with SwiftUI for learning and fun. It shows upcoming transit departures in Berlin by station, as returned by the [VBB API](https://3.vbb.transport.rest/docs).
 
 ## Limitations
 
