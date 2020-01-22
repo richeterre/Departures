@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5BE8991A239D15A500D0954E"
                BuildableName = "Departures.app"
-               BlueprintName = "Juostaanko WatchKit App"
-               ReferencedContainer = "container:Juostaanko.xcodeproj">
+               BlueprintName = "Departures WatchKit App"
+               ReferencedContainer = "container:Departures.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5BE89916239D15A500D0954E"
-               BuildableName = "Juostaanko.app"
-               BlueprintName = "Juostaanko"
-               ReferencedContainer = "container:Juostaanko.xcodeproj">
+               BuildableName = "Departures.app"
+               BlueprintName = "Departures"
+               ReferencedContainer = "container:Departures.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -62,8 +62,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BE8991A239D15A500D0954E"
             BuildableName = "Departures.app"
-            BlueprintName = "Juostaanko WatchKit App"
-            ReferencedContainer = "container:Juostaanko.xcodeproj">
+            BlueprintName = "Departures WatchKit App"
+            ReferencedContainer = "container:Departures.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
    </LaunchAction>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BE8991A239D15A500D0954E"
             BuildableName = "Departures.app"
-            BlueprintName = "Juostaanko WatchKit App"
-            ReferencedContainer = "container:Juostaanko.xcodeproj">
+            BlueprintName = "Departures WatchKit App"
+            ReferencedContainer = "container:Departures.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
@@ -90,8 +90,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BE8991A239D15A500D0954E"
             BuildableName = "Departures.app"
-            BlueprintName = "Juostaanko WatchKit App"
-            ReferencedContainer = "container:Juostaanko.xcodeproj">
+            BlueprintName = "Departures WatchKit App"
+            ReferencedContainer = "container:Departures.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
