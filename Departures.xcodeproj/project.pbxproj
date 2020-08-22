@@ -12,6 +12,7 @@
 		5B2C3926239E745700C82D26 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C3925239E745700C82D26 /* Station.swift */; };
 		5B2C3928239E852100C82D26 /* LineIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C3927239E852100C82D26 /* LineIcon.swift */; };
 		5B2C392B239E85BB00C82D26 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2C392A239E85BB00C82D26 /* Color.swift */; };
+		5BE874B324F1BB8500FB1A12 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE874B224F1BB8500FB1A12 /* Store.swift */; };
 		5BE8991C239D15A500D0954E /* Departures.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BE8991B239D15A500D0954E /* Departures.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5BE89922239D15A500D0954E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE89920239D15A500D0954E /* Interface.storyboard */; };
 		5BE89924239D15A600D0954E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE89923239D15A600D0954E /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		5B2C3925239E745700C82D26 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		5B2C3927239E852100C82D26 /* LineIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineIcon.swift; sourceTree = "<group>"; };
 		5B2C392A239E85BB00C82D26 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5BE874B224F1BB8500FB1A12 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5BE89917239D15A500D0954E /* Departures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Departures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE8991B239D15A500D0954E /* Departures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Departures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE89921239D15A500D0954E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		5BE874B124F1BB3A00FB1A12 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				5BE874B224F1BB8500FB1A12 /* Store.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		5BE89910239D15A500D0954E = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +150,10 @@
 		5BE8992E239D15A600D0954E /* Departures WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5BE89948239D26B200D0954E /* Models */,
 				5BE8994E239D9AAE00D0954E /* Views */,
 				5B2C3929239E85B300C82D26 /* Helpers */,
+				5BE89948239D26B200D0954E /* Models */,
+				5BE874B124F1BB3A00FB1A12 /* Store */,
 				5BE89931239D15A600D0954E /* HostingController.swift */,
 				5BE89933239D15A600D0954E /* ExtensionDelegate.swift */,
 				5BE89935239D15A700D0954E /* Assets.xcassets */,
@@ -315,6 +326,7 @@
 				5B2C392B239E85BB00C82D26 /* Color.swift in Sources */,
 				5B2C3926239E745700C82D26 /* Station.swift in Sources */,
 				5BE8994A239D270900D0954E /* Departure.swift in Sources */,
+				5BE874B324F1BB8500FB1A12 /* Store.swift in Sources */,
 				5B2C3924239E730900C82D26 /* StationList.swift in Sources */,
 				5BE89934239D15A600D0954E /* ExtensionDelegate.swift in Sources */,
 				5B2C3922239DA66400C82D26 /* LineDepartureList.swift in Sources */,

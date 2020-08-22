@@ -47,29 +47,15 @@ struct StationDetail: View {
     }
     
     func loadDepartures() {
-        var urlComponents = URLComponents(string: "\(BASE_URL_STRING)/\(station.id)/departures")!
-        urlComponents.queryItems = [URLQueryItem(name: "duration", value: "15")]
-        let url = urlComponents.url!
-        
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
-            if let data = data {
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-                
-                do {
-                    let decodedResponse = try decoder.decode([Departure].self, from: data)
-                    DispatchQueue.main.async {
-                        self.departures = decodedResponse
-                        self.lastUpdated = Date()
-                        
-                    }
-                } catch let error {
-                    print("Decode error", error)
-                }
-                return
+        Store.shared.loadDepartures(station: station) { result in
+            switch result {
+            case .success(let departures):
+                self.departures = departures
+                self.lastUpdated = Date()
+            case .failure(let error):
+                print("Got error: \(error)")
             }
-            print("Fetch error", error ?? "Unknown error")
-        }.resume()
+        }
     }
     
     func departuresByLine(departures: [Departure], moment: Date) -> [LineDepartureList] {

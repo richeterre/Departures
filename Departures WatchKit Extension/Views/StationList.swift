@@ -8,8 +8,6 @@
 
 import SwiftUI
 
-let BASE_URL_STRING = "https://3.vbb.transport.rest/stops"
-
 struct StationList: View {
     @State var stations = [
         Station(id: "900000054103", name: "U Eisenacher Str."),
