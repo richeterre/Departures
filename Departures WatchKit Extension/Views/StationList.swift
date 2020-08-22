@@ -11,8 +11,9 @@ import SwiftUI
 struct StationList: View {
     @State var stations = [
         Station(id: "900000054103", name: "U Eisenacher Str."),
-        Station(id: "900000013103", name: "U Prinzenstr."),
-        Station(id: "900000017104", name: "U Möckernbrücke")
+        Station(id: "900000055151", name: "Barbarossastr."),
+        Station(id: "900000055102", name: "U Bayerischer Platz"),
+        Station(id: "900000013102", name: "U Kottbusser Tor"),
     ]
     
     var body: some View {
