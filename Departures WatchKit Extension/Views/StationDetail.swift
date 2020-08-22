@@ -10,6 +10,7 @@ import SwiftUI
 
 struct StationDetail: View {
     let station: Station
+    let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     
     @State var departures = [Departure]()
     @State var lastUpdated = Date()
@@ -43,6 +44,7 @@ struct StationDetail: View {
             })
         })
         .onAppear(perform: loadDepartures)
+        .onReceive(timer) { _ in self.loadDepartures() }
         .navigationBarTitle(station.name)
     }
     
